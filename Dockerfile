@@ -11,9 +11,10 @@ COPY pyproject.toml requirements.txt ./
 # Install dependencies with uv
 RUN uv pip install --system --no-cache -r requirements.txt
 
-# Copy application code and model
+# Copy application code, model, and tests
 COPY app/ ./app/
 COPY model/ ./model/
+COPY tests/ ./tests/
 
 EXPOSE 8000
 

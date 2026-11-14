@@ -28,10 +28,14 @@ heart-desease-prediction-api/
 ├── tests/
 │   ├── __init__.py
 │   └── test_main.py     # Pytest test cases
+├── scripts/
+│   ├── deploy.ps1       # One-shot deploy (PowerShell)
+│   └── deploy.bat       # One-shot deploy (Windows Batch)
 ├── Dockerfile
 ├── docker-compose.yml
 ├── pyproject.toml       # uv project config
 ├── requirements.txt
+├── .gitignore
 └── README.md
 ```
 
@@ -42,7 +46,21 @@ heart-desease-prediction-api/
 - Docker installed
 - Docker Compose installed
 
-### Run the App
+### Quick Start (One-Shot Deploy)
+
+Run the deploy script to build, start, and open the app in your browser:
+
+**PowerShell:**
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/deploy.ps1
+```
+
+**Command Prompt:**
+```cmd
+scripts\deploy.bat
+```
+
+### Manual Run
 
 ```bash
 # Build the Docker image
@@ -214,16 +232,16 @@ http://localhost:8000/docs
 docker exec heart-disease-api uv run pytest tests/ -v
 ```
 
-### Run Tests Locally (if uv is installed)
-
-```bash
-uv run pytest tests/ -v
-```
-
 ### Run Tests with Docker Compose
 
 ```bash
 docker compose exec heart-disease-api uv run pytest tests/ -v
+```
+
+### Run Tests Locally (if uv is installed)
+
+```bash
+uv run pytest tests/ -v
 ```
 
 ## Docker Commands
@@ -339,10 +357,12 @@ The GitHub repository must contain:
 - `app/` - FastAPI application code
 - `model/` - Trained model artifacts (`heart_model.joblib`, `model_metadata.json`)
 - `tests/` - Test cases
+- `scripts/` - Deployment scripts
 - `Dockerfile`
 - `docker-compose.yml`
 - `requirements.txt`
 - `pyproject.toml` - uv project config
+- `.gitignore`
 - `README.md`
 
 Live Render deployment URL:
