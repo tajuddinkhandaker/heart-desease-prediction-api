@@ -1,0 +1,31 @@
+{
+  "selected_model": "Logistic Regression",
+  "feature_columns": [
+    "age",
+    "sex",
+    "cp",
+    "trestbps",
+    "chol",
+    "fbs",
+    "restecg",
+    "thalach",
+    "exang",
+    "oldpeak",
+    "slope",
+    "ca",
+    "thal"
+  ],
+  "target_column": "target",
+  "assumed_target_mapping": {
+    "0": "absence",
+    "1": "presence"
+  },
+  "random_state": 42,
+  "test_metrics": {
+    "Accuracy": 0.8688524590163934,
+    "Precision": 0.9032258064516129,
+    "Recall": 0.8484848484848485,
+    "F1-score": 0.875,
+    "ROC-AUC": 0.9047619047619048
+  }
+}
