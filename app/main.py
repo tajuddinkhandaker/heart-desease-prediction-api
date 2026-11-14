@@ -30,6 +30,17 @@ class PredictionResponse(BaseModel):
     heart_disease: bool
 
 
+@app.get("/")
+def root():
+    return {
+        "message": "Heart Disease Prediction API",
+        "docs": "/docs",
+        "health": "/health",
+        "info": "/info",
+        "predict": "/predict",
+    }
+
+
 @app.get("/health")
 def health():
     return {"status": "ok"}
