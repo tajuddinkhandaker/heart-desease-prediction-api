@@ -1,5 +1,7 @@
 # Heart Disease Prediction API
 
+**Live Deployment:** https://heart-desease-prediction-api.onrender.com/
+
 A FastAPI-based REST API that predicts heart disease (`heart_disease: true/false`) using a trained Logistic Regression model.
 
 ## Tech Stack
@@ -368,4 +370,4 @@ The GitHub repository must contain:
 Live Render deployment URL:
 
 ```
-https://<your-render-app-name>.onrender.com
+https://heart-desease-prediction-api.onrender.com
